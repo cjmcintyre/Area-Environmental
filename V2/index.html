@@ -11,16 +11,15 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/style.css"/>
+    
+    <link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map"></script>
     <script src="javascript/scrolling.js"></script>
-    
-    
+
     
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -109,39 +108,44 @@
 
 
 <!-- Container (Projects Section) -->
-   
-    
+
 <div id="projects" class="container">
   <h2>Pictures tell a thousand words</h2>
   <h4>See where we've been...</h4> 
 
- <div class="row justify-content-center">
-    <div class="col-md-8">
-        <div class="row">
-            <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
-            </a>
-            <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
-            </a>
-            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
-            </a>
-        </div>
-        <div class="row">
-            <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
-            </a>
-            <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
-            </a>
-            <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
-            </a>
-        </div>
-    </div>
+<!-- Set up your HTML -->
+<div class="owl-carousel owl-theme">
+    
+    <img class="myImg" src="src/Black%20Stork%202.JPG" data-toggle="modal" data-target="#exampleModal" alt="Text goes here">
+    <img class="myImg" src="src/Rainbowbeeeaters.JPG"  data-toggle="modal" data-target="#exampleModal" alt="Text goes here">
+    <img class="myImg" src="src/fauna.jpg" data-toggle="modal" data-target="#exampleModal" alt="Text goes here">
+    <img class="myImg" src="src/thumbnail1.jpg" data-toggle="modal" data-target="#exampleModal" alt="Text goes here">
+    <img class="myImg" src="src/flora.JPG" data-toggle="modal" data-target="#exampleModal" alt="Text goes here">
+    <img class="myImg" src="src/purplewood.jpg" data-toggle="modal" data-target="#exampleModal" alt="Text goes here">
+    <img class="myImg" src="src/wedge.JPG" data-toggle="modal" data-target="#exampleModal" alt="Text goes here">
+    <img class="myImg" src="src/thumbnail2.jpg" data-toggle="modal" data-target="#exampleModal" alt="Text goes here">
 </div>
+    
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">       
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
 
+      </div>
+
+    </div>
+  </div>
+</div>
+    
+    
+    </div>
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
@@ -152,9 +156,11 @@
     </div>
           <div class="col-sm-6 text-right">
       <p><span class="glyphicon glyphicon-envelope"></span> phil@areaenviromental.com.au</p>
-      </div>
+      </div></div>
     </div>
-    </div>
+ 
+
+    
 
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
@@ -162,9 +168,61 @@
   </a>
   <p>Made with ❤ by <a href="http://coreyjmcintyre.com" title="Link to coreyjmcintyre.com">coreyjmcintyre.</a></p>
 </footer>
-
     
+    
+<script type="text/javascript">
+$(document).ready(function(){  
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    }
+} 
+)});
+    
+    
+   
+// Get the modal
+var modal = document.getElementById('exampleModal');
 
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = $('.myImg');
+var modalImg = $("#img01");
+var captionText = document.getElementById("caption");
+$('.myImg').click(function(){
+    modal.style.display = "block";
+    var newSrc = this.src;
+    modalImg.attr('src', newSrc);
+    captionText.innerHTML = this.alt;
+    target.find(".owl-carousel").trigger("refresh.owl.carousel");
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+    </script>
 </body>
-    
+    <script src="jquery.min.js"></script>
+<script src="javascript/owl.carousel.min.js">
+    </script>
 </html>
